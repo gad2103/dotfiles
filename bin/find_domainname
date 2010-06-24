@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+for a in $*; do
+	results=$(h $a.com $a.net $a.org | grep "not found" | cut -f 2 -d ' ' | sort -u)
+
+	for n in $results; do 
+		if whois $n | grep -q 'No match for'; then
+		  echo "$n doesn't seem to be taken!"
+	  fi
+	done
+done

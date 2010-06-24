@@ -1,0 +1,57 @@
+if [ "$PS1" != "" ]; then
+
+    if [ -e ~/.use-screen           ] && \
+       [ "$SCREEN_RUNNING" != "yes" ] && \
+       [ "$TERM" == "xterm-color"   ]; then
+
+        export SCREEN_RUNNING="yes"
+
+        det="$(screen -ls | grep Detached | tr -s '\t' ' ' | cut -f 2 -d ' ' | head -n 1)"
+    
+        if [ "x$det" != "x" ]; then
+            screen -r $det
+        else
+            screen
+        fi
+        exit $?
+    fi
+
+    # Check for an interactive shell...
+    set -o vi
+
+    . ~/.bash/variables
+    . ~/.bash/aliases
+    . ~/.bash/heroku_vars
+    if [[ -s /Users/tsaleh/.rvm/scripts/rvm ]]; then 
+      . /Users/tsaleh/.rvm/scripts/rvm
+    fi
+
+    # completion stuff must come after variables
+    if [ -f /opt/local/etc/bash_completion ]; then
+        echo -n ' completion  ['
+        . /opt/local/etc/bash_completion
+        echo '.]'
+    fi
+
+    if [ -f /usr/local/etc/bash_completion ]; then
+        echo -n ' completion  ['
+        . /usr/local/etc/bash_completion
+        echo '.]'
+    fi
+
+    for f in ~/.bash/bash_completion.d/*; do
+      source $f
+    done
+
+    . ~/.bash/prompt 
+
+    # fix some broken completions...
+    # complete -o filenames -F _svn svn
+
+    shopt -s histappend
+
+    #eval `dircolors -b ~/.colors | grep -v alias`  
+fi
+
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm; fi
+

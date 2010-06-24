@@ -1,0 +1,48 @@
+#!/bin/bash
+echo -n " prompt      [" 
+
+Red='\[\033[;31;m\]'                                 && echo -n "."
+bRed='\[\033[;31;1m\]'                               && echo -n "."
+Blue='\[\033[;34;m\]'                                && echo -n "."
+bBlue='\[\033[;34;1m\]'                              && echo -n "."
+Yellow='\[\033[;33;m\]'                              && echo -n "."
+bYellow='\[\033[;33;1m\]'                            && echo -n "."
+White='\[\033[;37;m\]'                               && echo -n "."
+bWhite='\[\033[;37;1m\]'                             && echo -n "."
+clear='\[\033[0m\]'                                  && echo -n "."
+
+case $TERM in
+    xterm*|rxvt*|screen)
+        if [ "$LOCAL_PROMPT" ]; then
+            TITLEBAR='\[\033]0;\w\007\]'
+        else
+            TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+        fi
+        ;;
+    *)
+        TITLEBAR=""
+        ;;
+esac
+
+if [ "$USER" != "tsaleh" ]; then
+    U="${bWhite}$USER${clear}" && echo -n "R"
+    if [ "$LOCAL_PROMPT" ]; then
+        U="$U "
+    else
+        U="$U@"
+    fi
+else
+    U="" && echo -n "."
+fi
+
+if [ "$LOCAL_PROMPT" ]; then
+  export PS1="$TITLEBAR$Blue($Red\$?$Blue)$U$bYellow\w/$clear: " \
+  && echo -n "."
+else
+  export PS1="$TITLEBAR$Blue($Red\$?$Blue)$U$clear$bWhite\h$clear:$bYellow\w/$clear: " \
+  && echo -n "."
+fi
+
+unset Red bRed Blue bBlue Yellow bYellow White bWhite clear TITLEBAR
+
+echo "]"

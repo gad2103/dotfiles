@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+file=$1
+start=$2
+end=$3
+
+if [ -z $file ]; then
+  echo "Usage $0 filename [start-line [end-line]]"
+  exit 2
+fi
+
+dir=$(dirname $file)
+
+cd $dir
+
+# Todo: add logic to only call sed if $start and $end are given (or default to beginning/end of line)
+
+if [ -d .svn ]; then
+  svn blame $file    | sed -n "${start},${end}p"
+else
+  #git blame -w $file | sed -n "s|^(.{4}).*|\1|; ${start},${end}p"
+  git blame -w $file | sed -n "${start},${end}p" 
+  # git blame -t -w $file | sed -n "${start},${end}p" | sed -n "s/\[0-9\]{1}//p"
+fi
+

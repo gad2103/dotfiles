@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# Below are  the color init  strings for  the basic file  types. A color
+# init string  consists of one or  more of the following  numeric codes:
+
+# Attribute  codes:  
+# 00=none  
+# 01=bold 
+# 04=underscore  
+# 05=blink 
+# 07=reverse
+# 08=concealed  
+
+# Text color  codes:  
+# 30=black  
+# 31=red 
+# 32=green  
+# 33=yellow
+# 34=blue 
+# 35=magenta 
+# 36=cyan 
+# 37=white  
+
+# Background color codes:  
+# 40=black
+# 41=red 
+# 42=green 
+# 43=yellow 
+# 44=blue 
+# 45=magenta 
+# 46=cyan 
+# 47=white
+
+
+LS_COLORS='no=00:'                    # normal
+LS_COLORS=$LS_COLORS'fi=00:'          # file
+LS_COLORS=$LS_COLORS'di=01;33:'       # directory
+LS_COLORS=$LS_COLORS'ln=01;36:'       # link
+LS_COLORS=$LS_COLORS'pi=40;33:'       # pipe (FIFO)
+LS_COLORS=$LS_COLORS'so=01;35:'       # socket
+LS_COLORS=$LS_COLORS'do=01;35:'       # ?
+LS_COLORS=$LS_COLORS'bd=40;33;01:'    # block device
+LS_COLORS=$LS_COLORS'cd=40;33;01:'    # char  device
+LS_COLORS=$LS_COLORS'or=40;31;01:'    # orphan (link with no target)
+LS_COLORS=$LS_COLORS'ex=01;37:'       # executable
+
+LS_COLORS=$LS_COLORS'*.tar=01;31:'
+LS_COLORS=$LS_COLORS'*.tgz=01;31:'
+LS_COLORS=$LS_COLORS'*.arj=01;31:'
+LS_COLORS=$LS_COLORS'*.taz=01;31:'
+LS_COLORS=$LS_COLORS'*.lzh=01;31:'
+LS_COLORS=$LS_COLORS'*.zip=01;31:'
+LS_COLORS=$LS_COLORS'*.z=01;31:'
+LS_COLORS=$LS_COLORS'*.Z=01;31:'
+LS_COLORS=$LS_COLORS'*.gz=01;31:'
+LS_COLORS=$LS_COLORS'*.bz2=01;31:'
+LS_COLORS=$LS_COLORS'*.deb=01;31:'
+LS_COLORS=$LS_COLORS'*.rpm=01;31:'
+
+LS_COLORS=$LS_COLORS'*.jpg=01;35:'
+LS_COLORS=$LS_COLORS'*.png=01;35:'
+LS_COLORS=$LS_COLORS'*.gif=01;35:'
+LS_COLORS=$LS_COLORS'*.bmp=01;35:'
+LS_COLORS=$LS_COLORS'*.ppm=01;35:'
+LS_COLORS=$LS_COLORS'*.tga=01;35:'
+LS_COLORS=$LS_COLORS'*.xbm=01;35:'
+LS_COLORS=$LS_COLORS'*.xpm=01;35:'
+LS_COLORS=$LS_COLORS'*.tif=01;35:'
+LS_COLORS=$LS_COLORS'*.png=01;35:'
+LS_COLORS=$LS_COLORS'*.mpg=01;35:'
+LS_COLORS=$LS_COLORS'*.avi=01;35:'
+LS_COLORS=$LS_COLORS'*.fli=01;35:'
+LS_COLORS=$LS_COLORS'*.gl=01;35:'
+LS_COLORS=$LS_COLORS'*.dl=01;35:'
+export LS_COLORS
+

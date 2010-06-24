@@ -1,0 +1,4 @@
+shell $SHELL
+defscrollback 0
+escape ^jj
+startup_message off

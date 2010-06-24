@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#dig +search +nostats +nocomments +nocmd $*
+for query in $*; do
+    host $query
+done

@@ -1,0 +1,41 @@
+Autotest.add_hook :initialize do |at|
+  at.add_exception(%r{/doc})
+  at.add_exception(%r{/bin})
+  at.add_exception(%r{\.svn})
+  at.add_exception(%r{\.git})
+  at.add_exception(%r{.log$})
+  at.add_exception(%r{/\.autotest$})
+  at.add_exception(%r{README})
+  at.add_exception(%r{Manifest})
+end
+
+Autotest.add_hook :initialize do |at|
+  at.unit_diff = 'cat'
+
+  # at.add_mapping(%r%^test/.*\.rb$%) {|filename, _| filename }
+
+  # unless ARGV.empty?
+  #   if ARGV.length == 1
+  #     case ARGV.first
+  #     when 'units':
+  #       at.find_directories = ["test/unit", "app/models", "app/views/*mail*"]
+  #     when 'functionals':
+  #       at.find_directories = ["test/functional", "app/controllers", "app/views"]
+  #     end
+  #   else
+  #     at.find_directories = ARGV.dup
+  #   end
+  # end
+end
+
+require 'autotest/fsevent'
+require 'autotest/growl'
+#require 'autotest/redgreen'
+#require 'autotest/migrate'
+
+Autotest.add_hook :ran_command do |at|
+  File.open('/tmp/autotest.txt', 'wb') do |f|
+    f.write(at.results.join)
+  end
+end
+

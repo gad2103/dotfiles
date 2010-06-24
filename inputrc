@@ -1,0 +1,14 @@
+set editing-mode vi
+set keymap vi 
+set show-all-if-ambiguous on                        
+set visible-stats on
+set match-hidden-files off
+set mark-symlinked-directories on
+
+#set mark-modified-lines on
+#set show-all-if-ambiguous on
+#"f":vi-search
+#"/":vi-char-search
+"\e[A":history-search-backward
+"\e[B":history-search-forward
+

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+git push && rake git:push:staging && cap staging deploy
