@@ -2,6 +2,7 @@
 
 git_bundles = [ 
   "git://github.com/astashov/vim-ruby-debugger.git",
+  "git://github.com/ervandew/supertab.git",
   "git://github.com/godlygeek/tabular.git",
   "git://github.com/hallison/vim-rdoc.git",
   "git://github.com/msanders/snipmate.vim.git",
@@ -17,10 +18,11 @@ git_bundles = [
   "git://github.com/tpope/vim-repeat.git",
   "git://github.com/tpope/vim-surround.git",
   "git://github.com/tpope/vim-vividchalk.git",
+  "git://github.com/tsaleh/taskpaper.vim.git",
   "git://github.com/tsaleh/vim-matchit.git",
   "git://github.com/tsaleh/vim-shoulda.git",
-  "git://github.com/tsaleh/vim-supertab.git",
   "git://github.com/tsaleh/vim-tcomment.git",
+  "git://github.com/tsaleh/vim-tmux.git",
   "git://github.com/vim-ruby/vim-ruby.git",
 ]
 
