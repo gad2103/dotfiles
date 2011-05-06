@@ -3,8 +3,5 @@ subversion/auth
 vim/backups/*
 .DS_Store
 vim/.netrwhist
-rvm/log/*
-rvm/src/*
-rvm/archives/*
 
 !.keep

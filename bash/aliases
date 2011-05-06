@@ -1,23 +1,17 @@
 #!/bin/bash
-echo -n " aliases     [" 
+alias cl="clear"
+alias chmod='chmod -v'
+alias cp='cp -i'
+alias mv='mv -i'
+alias c="cd .."
+alias ftp="ncftp"
+alias ls="ls -ohF"
+alias git="hub"
 
-alias cl="clear"                             && echo -n "."
-alias chmod='chmod -v'                       && echo -n "."
-alias cp='cp -i'                             && echo -n "."
-alias mv='mv -i'                             && echo -n "."
-alias c="cd .."                              && echo -n "."
-alias ftp="ncftp"                            && echo -n "."
-alias ls="ls -ohF"                           && echo -n "."
-alias git="hub"                              && echo -n "."
+alias ss="ssh"
 
-alias ss=ssh                                 && echo -n "."
-
-alias rr="touch tmp/restart.txt"             && echo -n "."
-alias sc="./script/console"                  && echo -n "."
-alias db="rake db:shell"                     && echo -n "."
-alias remigrate='rake db:migrate --trace && rake db:migrate:redo --trace && rake db:schema:dump db:test:prepare'
-alias sp="clear && spec -c spec"
+alias sc="merb -i"
+alias be="bundle exec"
+alias bi="bundle install"
 
 function settitle() { echo -ne "\e]2;$@\a\e]1;$@\a"; } && echo -n "."
-
-echo "]"

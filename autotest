@@ -7,6 +7,7 @@ Autotest.add_hook :initialize do |at|
   at.add_exception(%r{/\.autotest$})
   at.add_exception(%r{README})
   at.add_exception(%r{Manifest})
+  at.add_exception(%r{capybara})
 end
 
 Autotest.add_hook :initialize do |at|
@@ -33,9 +34,9 @@ require 'autotest/growl'
 #require 'autotest/redgreen'
 #require 'autotest/migrate'
 
-Autotest.add_hook :ran_command do |at|
-  File.open('/tmp/autotest.txt', 'wb') do |f|
-    f.write(at.results.join)
-  end
-end
+# Autotest.add_hook :ran_command do |at|
+#   File.open('/tmp/autotest.txt', 'wb') do |f|
+#     f.write(at.results.join)
+#   end
+# end
 

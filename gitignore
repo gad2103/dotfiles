@@ -5,3 +5,11 @@ coverage
 coverage.data
 TAGS
 webrat-*.html
+capybara-*.html
+*Autosaved*
+tmp/email-*.txt
+.bundle
+
+!.keep
+!.keepme
+!.gitkeep
