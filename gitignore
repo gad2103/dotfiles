@@ -9,6 +9,7 @@ capybara-*.html
 *Autosaved*
 tmp/email-*.txt
 .bundle
+.sass-cache
 
 !.keep
 !.keepme
