@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-git push && rake git:push:production && cap production deploy
