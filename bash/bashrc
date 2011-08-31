@@ -1,5 +1,4 @@
 if [ "$PS1" != "" ]; then
-
     if [ -e ~/.use-screen           ] && \
        [ "$SCREEN_RUNNING" != "yes" ] && \
        [ "$TERM" == "xterm-color"   ]; then
@@ -16,42 +15,14 @@ if [ "$PS1" != "" ]; then
         exit $?
     fi
 
-    # Check for an interactive shell...
     set -o vi
 
-    . ~/.bash/variables
-    . ~/.bash/aliases
-    . ~/.bash/heroku_vars
-    if [[ -s /Users/tsaleh/.rvm/scripts/rvm ]]; then 
-      . /Users/tsaleh/.rvm/scripts/rvm
-    fi
-
-    # completion stuff must come after variables
-    if [ -f /opt/local/etc/bash_completion ]; then
-        echo -n ' completion  ['
-        . /opt/local/etc/bash_completion
-        echo '.]'
-    fi
-
-    if [ -f /usr/local/etc/bash_completion ]; then
-        echo -n ' completion  ['
-        . /usr/local/etc/bash_completion
-        echo '.]'
-    fi
-
-    for f in ~/.bash/bash_completion.d/*; do
+    for f in ~/.bash/plugins/*; do
+      echo -n "$(basename $f) "
       source $f
     done
-
-    . ~/.bash/prompt 
-
-    # fix some broken completions...
-    # complete -o filenames -F _svn svn
+    echo 
 
     shopt -s histappend
-
-    #eval `dircolors -b ~/.colors | grep -v alias`  
 fi
-
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm; fi
 

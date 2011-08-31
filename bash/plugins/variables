@@ -1,0 +1,41 @@
+#!/bin/bash
+export CLICOLOR=1
+export LSCOLORS=dxFxCxDxBxegedabagacad
+export HISTCONTROL="ignoredups"
+export HISTSIZE="2000"
+
+export EDITOR="vim"
+export PAGER=less
+export LESS="-X -M -E -R"
+export LESSOPEN="| $HOME/bin/lesspipe.sh %s"
+export LS_OPTIONS="--color=yes  -F -b -T 0"
+export BLOCKSIZE=K
+export PARINIT='w72jrT4bgqR B=.,?_A_a Q=_s>|'
+export LC_CTYPE=en_US.UTF-8
+export VIM_APP_DIR=/Applications
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;33'
+
+export PATH=~/bin
+export PATH=$PATH:~/.gem/ruby/1.8/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:/opt/local/bin
+export PATH=$PATH:/opt/local/sbin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/bin
+export PATH=$PATH:/sbin
+
+export MANPATH=/opt/local/share/man:$MANPATH
+export MANPATH=/usr/local/man:$MANPATH
+
+export RUBY_HEAP_MIN_SLOTS=2000000;
+export RUBY_HEAP_SLOTS_INCREMENT=500000;
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1;
+export RUBY_GC_MALLOC_LIMIT=75000000;
+
+[ $TERM = "screen" ] && export TERM=xterm
+
+

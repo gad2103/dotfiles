@@ -1,4 +1,3 @@
-#!/bin/bash
 alias cl="clear"
 alias chmod='chmod -v'
 alias cp='cp -i'
@@ -6,7 +5,6 @@ alias mv='mv -i'
 alias c="cd .."
 alias ftp="ncftp"
 alias ls="ls -ohF"
-alias git="hub"
 
 alias ss="ssh"
 
@@ -14,4 +12,3 @@ alias sc="merb -i"
 alias be="bundle exec"
 alias bi="bundle install"
 
-function settitle() { echo -ne "\e]2;$@\a\e]1;$@\a"; } && echo -n "."
