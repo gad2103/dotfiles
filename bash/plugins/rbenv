@@ -1,4 +1,2 @@
-export PATH="${HOME}/.rbenv/shims:${PATH}"
-source /usr/local/Cellar/rbenv/*/libexec/../completions/rbenv.bash
-rbenv rehash 2>/dev/null
+eval "$(rbenv init -)"
 
