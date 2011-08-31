@@ -16,13 +16,9 @@ export VIM_APP_DIR=/Applications
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
-export PATH=~/bin
-export PATH=$PATH:~/.gem/ruby/1.8/bin
+export PATH=$PATH:~/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:/usr/local/mysql/bin
-export PATH=$PATH:/opt/local/bin
-export PATH=$PATH:/opt/local/sbin
 export PATH=$PATH:/usr/bin
 export PATH=$PATH:/usr/sbin
 export PATH=$PATH:/bin
