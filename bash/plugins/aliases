@@ -8,7 +8,3 @@ alias ls="ls -ohF"
 
 alias ss="ssh"
 
-alias sc="merb -i"
-alias be="bundle exec"
-alias bi="bundle install"
-
