@@ -72,7 +72,8 @@ if has("gui_macvim")
   " write on pretty much any event (including :q) 
   set autowriteall
   set tabpagemax=100
-  set guifont=Inconsolata:h20,\ DejaVu\ Sans\ Mono:h15
+  "set guifont=Inconsolata:h20,\ DejaVu\ Sans\ Mono:h15
+  set guifont=Monofur:h20
   " set guifont=Consolas:h18
 endif
 
