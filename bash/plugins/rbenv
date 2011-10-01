@@ -1,2 +1,3 @@
 eval "$(rbenv init -)"
 
+export PATH="/Users/andrew/.rbenv/shims:/Users/andrew/.rbenv/bin:$PATH"

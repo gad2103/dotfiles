@@ -43,6 +43,7 @@ vmap gl :<C-U>!blame <C-R>=expand("%:p") <CR> <C-R>=line("'<") <CR> <C-R>=line("
 vmap # :TComment<CR>
 map - :Tabularize hash
 map <C-l> :nohl
+map <leader>a :Tabularize /=>\?<cr>
 
 " Make j/k move to next visual line instead of physical line
 " http://yubinkim.com/?p=6
