@@ -18,7 +18,8 @@ if [ "$PS1" != "" ]; then
     set -o vi
 
     for f in ~/.bash/plugins/*; do
-      echo -n "$(basename $f) "
+      # echo -n "$(basename $f) "
+      echo -n "."
       source $f
     done
     echo 
