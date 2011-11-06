@@ -203,3 +203,5 @@ endfunction
 
 command! -range B <line1>,<line2>call <SID>RubyBlockSwitchDelimiters()
 vmap <Leader>B :call <SID>RubyBlockSwitchDelimiters()<cr>
+" Fuck tpope
+xmap s <Plug>VSurround
