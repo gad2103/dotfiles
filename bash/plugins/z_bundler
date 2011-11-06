@@ -1,6 +1,6 @@
 # named with a z_ to ensure the path is at the front
 
-alias bi="bundle install --binstubs .bin"
+alias bi="bundle install --binstubs"
 alias bu="bundle update"
 
-export PATH=./.bin:$PATH
+export PATH=./bin:$PATH
