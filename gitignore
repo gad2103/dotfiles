@@ -10,6 +10,7 @@ capybara-*.html
 tmp/email-*.txt
 .bundle
 .sass-cache
+.env
 
 !.keep
 !.keepme

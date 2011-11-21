@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-clear
-echo $*
-ruby -Itest -Ispec -e "%w[$*].each {|f| require f}" | egrep -v -e "^Loaded suite" -e "^Started" -e "^Finished in" -e "[0-9]+ examples" -e "^\s*$"
-
-
