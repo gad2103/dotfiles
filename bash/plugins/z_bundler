@@ -3,4 +3,5 @@
 alias bi="bundle install --binstubs"
 alias bu="bundle update"
 
-export PATH=./bin:$PATH
+# The .bin is for gems using Bundler
+export PATH=./bin:./.bin:$PATH
