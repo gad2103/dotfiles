@@ -20,6 +20,12 @@ let g:surround_40 = "(\r)"
 let g:surround_91 = "[\r]"
 let g:surround_60 = "<\r>"
 
+let g:acp_ignorecaseOption = 0
+
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabLongestHighlight = 1
+let g:SuperTabCrClosePreview = 1
+
 set backspace=indent,eol,start
 
 set backup              " keep a backup file
@@ -35,7 +41,7 @@ set helpheight=1000
 
 set completeopt=longest,menu,preview
 set wildmode=longest,list:longest
-set complete=.,t
+" set complete=.,t
 
 setlocal numberwidth=3
 
