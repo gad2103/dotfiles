@@ -5,7 +5,7 @@ export HISTSIZE="2000"
 export LSCOLORS=dxFxCxDxBxegedabagacad
 
 export EDITOR="vim"
-export VISUAL="v"
+export VISUAL="vim"
 export PAGER=less
 export BLOCKSIZE=K
 export PARINIT='w72jrT4bgqR B=.,?_A_a Q=_s>|'
